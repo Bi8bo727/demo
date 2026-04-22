@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"time"
 )
@@ -87,11 +86,17 @@ func main() {
 	//fmt.Println(testClosure(2)(1, 2, 3, 4, 5))
 	//fmt.Println(time.Now().Format("2006-01-02 15:04:05"))
 	//fmt.Println(_const.Monday)
-	var s Student = Student{Name: "张三", Age: 0, Password: "123456"}
-	bytes, _ := json.Marshal(s)
-	fmt.Println(string(bytes))
-	var code MyCode = 1
-	fmt.Printf("%T", code)
+	//var s Student = Student{Name: "张三", Age: 0, Password: "123456"}
+	//bytes, _ := json.Marshal(s)
+	//fmt.Println(string(bytes))
+	//var code MyCode = 1
+	//fmt.Printf("%T", code)
+	testInterface()
+}
+func testInterface() {
+	var a Animal
+	a = Chicken{Name: "chick"}
+	a.Eat()
 }
 
 type MyCode int
