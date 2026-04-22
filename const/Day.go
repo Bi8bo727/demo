@@ -14,4 +14,6 @@ const (
 	Friday
 	Saturday
 	Sunday
+	Myday
+	Yourday
 )
